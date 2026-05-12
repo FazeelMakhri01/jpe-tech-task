@@ -69,6 +69,16 @@ docker run -p 3000:3000 release-status-dashboard
 
 ---
 
+## Infrastructure
+
+The `infra/` folder contains a small Terraform example for discussion.
+
+You do not need to deploy this infrastructure or have AWS credentials.
+
+Please review it as part of the task and include any observations, concerns, or improvements in your notes.
+
+---
+
 ## Submission
 
 Please send us:
