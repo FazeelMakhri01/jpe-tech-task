@@ -2,7 +2,7 @@
 
 ## How I Ran the Application
 
-Forked the repo into my personal GitHub, created a local working directory for the task, and cloned it down. Opened the whole folder in VSCode first to get a feel for the structure before touching anything — understanding what you're working with before making changes saves time later.
+Forked the repo into my personal GitHub, created a local working directory for the task, and cloned it down. Opened the whole folder in VSCode first to get a feel for the structure before touching anything, understanding what you're working with before making changes saves time later.
 
 Cloned the repo, ran `npm install` and `npm start` to confirm the app came up on `http://localhost:3000` as expected.
 
