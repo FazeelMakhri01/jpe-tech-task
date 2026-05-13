@@ -19,7 +19,7 @@ From there I moved straight to Docker, since that's where the application would 
 - No `.dockerignore` file existed. Without it, `node_modules`, `.git`, and other local artefacts get copied into the build context, bloating the image and potentially leaking local state.
 - The Dockerfile had no health check. Docker's default behaviour is to check whether the process is running, it has no idea if the app inside is actually healthy. The repo already had a `/health` endpoint (or equivalent script), so I wired that into a `HEALTHCHECK` instruction. This means `docker logs` and `docker ps` will now surface whether the container is genuinely healthy rather than just alive.
 
-### CI/CD Pipeline (`deploy.yml`)
+### CI/CD Pipeline (`deploy.yml & deploy.sh`)
 
 - There was no clear separation of stages. A CI pipeline should follow `build → test → deploy` in that order, and the existing workflow didn't enforce this.
 - `npm install` was being used for dependency installation. Swapped to `npm ci`, which is faster, reproducible, and the correct choice for CI environments, it installs from `package-lock.json` exactly rather than resolving.
